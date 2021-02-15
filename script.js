@@ -9,15 +9,15 @@ let min = date.getMinutes();
 let sec = date.getSeconds();
 
 
-let hrPosition = hr;
-let minPosition = min;
-let secPosition = sec;
+let hrPosition = (hr*360)/12 + ((min*360)/60)/12;
+let minPosition = (min*360)/60 + ((sec*360)/60)/60;
+let secPosition = (sec*360)/60;
 
 
 
-console.log(hr);
-console.log(min);
-console.log(sec);
+console.log("hours : " +hr);
+console.log("Minit : " + min);
+console.log("Secound : " +sec);
 
 
 HOURHAND.style.transform = "rotate(" + hrPosition +"deg)";
